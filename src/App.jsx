@@ -3,7 +3,7 @@ import "../public/index.css";
 function App() {
   return (
     <div className="card">
-      <Avatar imgName="../public/Gigachad.jpg" />
+      <Avatar imgName="../public/Gigachad.jpeg" />
       <div className="data">
         <Intro />
         {/* Should contain one Skill component
@@ -23,10 +23,11 @@ function Intro() {
     <div>
       <h1>Giga Chad</h1>
       <p>
-        The Ultimate Man, the Chad to out Chad all Chads, the Alpha Male of the
-        Alpha Males. If a woman were to look in his direction she would
-        immediately get pregnant. His jawline is a perfect 116 degrees. The
-        absolute Chad to end all absolute Chads.
+        Ernest Khalimov, also known as the Gigachad, is the perfect human
+        specimen destined to "lead us against the reptilians" and is the God of
+        all chads. He is the strongest character and sigma male to have possibly
+        ever existed, with very few ever even rivaling him. Not even blatantly
+        OP characters can beat the Gigachad, he is just this powerful.
       </p>
     </div>
   );
@@ -34,17 +35,51 @@ function Intro() {
 function SkillList() {
   return (
     <ul className="skill-list">
-      <SkillElement skillName="Test" style={{ backgroundColor: "red" }} />
-      <SkillElement />
-      <SkillElement />
-      <SkillElement />
-      <SkillElement />
-      <SkillElement />
+      <SkillElement
+        skillName="Meme Power"
+        skillEmoji="💪🏼"
+        skillColor="#e74645"
+      />
+      <SkillElement
+        skillName="Regeneration"
+        skillEmoji="🌱"
+        skillColor="#1ac0c6"
+      />
+      <SkillElement
+        skillName="Genius Intelligence"
+        skillEmoji="🧠"
+        skillColor="#facd60"
+      />
+      <SkillElement
+        skillName="Immortality"
+        skillEmoji="♾️"
+        skillColor="#fb7756"
+      />
+      <SkillElement
+        skillName="Enhanced Senses"
+        skillEmoji="👁️"
+        skillColor="#fdfa66"
+      />
+      <SkillElement
+        skillName="Space-Time Manipulation"
+        skillEmoji="✨"
+        skillColor="#75e8e7"
+      />
+      <SkillElement
+        skillName="Power Absorption"
+        skillEmoji="🔋"
+        skillColor="#ddacf5"
+      />
     </ul>
   );
 }
 function SkillElement(props) {
-  return <li className="skill">{props.skillName}</li>;
+  return (
+    <li className="skill" style={{ backgroundColor: props.skillColor }}>
+      <span>{props.skillName}</span>
+      <span>{props.skillEmoji}</span>
+    </li>
+  );
 }
 
 export default App;
