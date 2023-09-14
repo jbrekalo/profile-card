@@ -2,9 +2,9 @@
 
 ## Solution to the coding challenge: Profile Card (v1)
 
-## About the project
+### About the project
 
-This is my <strong>1<sup>tt</sup></strong> React challenge.
+This is my <strong>1<sup>st</sup></strong> React challenge.
 
 The goal of this challenge is to learn how to create and reuse Components, pass and recieve Props and how to use JSX.
 
