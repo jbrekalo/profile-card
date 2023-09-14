@@ -3,7 +3,7 @@ import "../public/index.css";
 function App() {
   return (
     <div className="card">
-      <Avatar imgName="../public/Gigachad.jpeg" />
+      <Avatar imgName="Gigachad.jpeg" />
       <div className="data">
         <Intro />
         {/* Should contain one Skill component
