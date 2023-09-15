@@ -1,5 +1,50 @@
 import "../public/index.css";
 
+const skills = [
+  {
+    name: "Meme Power",
+    emoji: "💪🏼",
+    level: "advanced",
+    color: "#e74645",
+  },
+  {
+    name: "Regeneration",
+    emoji: "🌱",
+    level: "advanced",
+    color: "#1ac0c6",
+  },
+  {
+    name: "Genius Intelligence",
+    emoji: "🧠",
+    level: "advanced",
+    color: "#facd60",
+  },
+  {
+    name: "Immortality",
+    emoji: "♾️",
+    level: "advanced",
+    color: "#fb7756",
+  },
+  {
+    name: "Enhanced Senses",
+    emoji: "👁️",
+    level: "intermediate",
+    color: "#fdfa66",
+  },
+  {
+    name: "Space-Time Manipulation",
+    emoji: "✨",
+    level: "advanced",
+    color: "#75e8e7",
+  },
+  {
+    name: "Power Absorption",
+    emoji: "🔋",
+    level: "beginner",
+    color: "#ddacf5",
+  },
+];
+
 function App() {
   return (
     <div className="card">
@@ -35,49 +80,28 @@ function Intro() {
 function SkillList() {
   return (
     <ul className="skill-list">
-      <SkillElement
-        skillName="Meme Power"
-        skillEmoji="💪🏼"
-        skillColor="#e74645"
-      />
-      <SkillElement
-        skillName="Regeneration"
-        skillEmoji="🌱"
-        skillColor="#1ac0c6"
-      />
-      <SkillElement
-        skillName="Genius Intelligence"
-        skillEmoji="🧠"
-        skillColor="#facd60"
-      />
-      <SkillElement
-        skillName="Immortality"
-        skillEmoji="♾️"
-        skillColor="#fb7756"
-      />
-      <SkillElement
-        skillName="Enhanced Senses"
-        skillEmoji="👁️"
-        skillColor="#fdfa66"
-      />
-      <SkillElement
-        skillName="Space-Time Manipulation"
-        skillEmoji="✨"
-        skillColor="#75e8e7"
-      />
-      <SkillElement
-        skillName="Power Absorption"
-        skillEmoji="🔋"
-        skillColor="#ddacf5"
-      />
+      {skills.map((skill) => (
+        <SkillElement
+          name={skill.name}
+          emoji={skill.emoji}
+          level={skill.level}
+          color={skill.color}
+        />
+      ))}
     </ul>
   );
 }
-function SkillElement(props) {
+
+function SkillElement({ name, emoji, level, color }) {
   return (
-    <li className="skill" style={{ backgroundColor: props.skillColor }}>
-      <span>{props.skillName}</span>
-      <span>{props.skillEmoji}</span>
+    <li className="skill" style={{ backgroundColor: color }}>
+      <span>{name}</span>
+      <span>{emoji}</span>
+      <span>
+        {level === "beginner" && "| ★☆☆"}
+        {level === "intermediate" && "| ★★☆"}
+        {level === "advanced" && "| ★★★"}
+      </span>
     </li>
   );
 }
